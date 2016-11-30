@@ -1,0 +1,222 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VHM Table of Content 1.0\n"
+"POT-Creation-Date: 2016-10-31 19:31-0300\n"
+"PO-Revision-Date: 2016-10-31 19:32-0300\n"
+"Last-Translator: Viktor H. Morales <viktorhugomorales@gmail.com>\n"
+"Language-Team: Viktor H. Morales <viktorhugomorales@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_nx:4c,1,2;_ex:1,2c\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../js\n"
+
+#: ../admin/class-vhm-toc-admin.php:120
+msgid "VHM Table of Content Settings"
+msgstr "Opciones de VHM Tabla de Contenidos"
+
+#: ../admin/class-vhm-toc-admin.php:121
+msgid "VHM Table of Content"
+msgstr "VHM Tabla de Contenidos"
+
+#: ../admin/class-vhm-toc-admin.php:143
+msgid "General"
+msgstr "General"
+
+#: ../admin/class-vhm-toc-admin.php:149
+msgid "Element"
+msgstr "Elemento"
+
+#: ../admin/class-vhm-toc-admin.php:157
+msgid "Before items template"
+msgstr "Plantilla antes de los items"
+
+#: ../admin/class-vhm-toc-admin.php:165
+msgid "Before each item template"
+msgstr "Plantilla antes de cada item"
+
+#: ../admin/class-vhm-toc-admin.php:173
+msgid "Each items class"
+msgstr "Clase CSS para cada item"
+
+#: ../admin/class-vhm-toc-admin.php:181
+msgid "After each item template"
+msgstr "Plantilla para después de cada item"
+
+#: ../admin/class-vhm-toc-admin.php:189
+msgid "After items template"
+msgstr "Plantilla para después de los items"
+
+#: ../admin/class-vhm-toc-admin.php:209
+msgid "Please change the settings accordingly."
+msgstr "Cambie las opciones según sus necesidades."
+
+#: ../admin/class-vhm-toc-admin.php:219
+msgid ""
+"Specify the HTML element you want to collect from the post content to create "
+"the table of content."
+msgstr ""
+"Especifique el elemento HTML que quiera recojer del contenido de la entrada "
+"para crear la tabla de contenido."
+
+#: ../admin/class-vhm-toc-admin.php:229
+msgid ""
+"In order to see the table of content, two IDs must be specified before "
+"listing the links:"
+msgstr ""
+"Para mostrar la tabla de contenidos, dos IDs deben ser especificados antes "
+"de listar los items:"
+
+#: ../admin/class-vhm-toc-admin.php:230
+#, php-format
+msgid "%s which is the global wrapper of the items."
+msgstr "%s el cual es el que encierra la tabla de contenido."
+
+#: ../admin/class-vhm-toc-admin.php:231
+#, php-format
+msgid "%s where the items will be added."
+msgstr "%s donde se mostrarán los items."
+
+#: ../admin/class-vhm-toc-admin.php:233
+msgid "Check this example"
+msgstr "Vea el siguiente ejemplo"
+
+#: ../includes/class-vhm-toc-activator.php:55
+msgid "Table of Content"
+msgstr "Tabla de Contenidos"
+
+#~ msgid "Previous page"
+#~ msgstr "Anterior"
+
+#~ msgid "Next page"
+#~ msgstr "Siguiente"
+
+#~ msgid "Page"
+#~ msgstr "Página"
+
+#~ msgid ""
+#~ "This post is password protected. Enter the password to view any comments."
+#~ msgstr ""
+#~ "Este artículo está protegido. Ingrese la contraseña para ver los "
+#~ "comentarios."
+
+#~ msgid "1 comment"
+#~ msgstr "1 comentario"
+
+#~ msgid "% comments"
+#~ msgstr "% comentarios"
+
+#~ msgid "Help me by leaving a reply! :)"
+#~ msgstr "¡Ayudame dejando tu comentario! :)"
+
+#~ msgid "Contact me"
+#~ msgstr "Contactame"
+
+#~ msgid "Testimonials"
+#~ msgstr "Testimoniales"
+
+#~ msgid ""
+#~ "Websites | Branding | Brochures | E-Marketing | Social Media | And more..."
+#~ msgstr ""
+#~ "Sitios web | Branding | Folleteria | E-Marketing | Social Media | Y más..."
+
+#~ msgid "Powered by"
+#~ msgstr "Con tecnología de"
+
+#~ msgid "hosted by"
+#~ msgstr "hospedado por"
+
+#~ msgid "Designed by"
+#~ msgstr "Diseño por"
+
+#~ msgid "Edit"
+#~ msgstr "Editar"
+
+#~ msgid "%1$s on %2$s"
+#~ msgstr "%1$s el %2$s"
+
+#~ msgid "%1$s at %2$s"
+#~ msgstr "%1$s a las %2$s"
+
+#~ msgid "Your comment is awaiting moderation."
+#~ msgstr "Su comentario aguarda moderación"
+
+#~ msgid "Home"
+#~ msgstr "Inicio"
+
+#~ msgid "read more &raquo;"
+#~ msgstr "leer más &raquo;"
+
+#~ msgid "Continue reading and comment"
+#~ msgstr "Continuar leyendo y comentar"
+
+#~ msgid "Testimonial"
+#~ msgstr "Testimonios"
+
+#~ msgid "There's no greater freedom than being able to choose."
+#~ msgstr "No hay mayor libertad que la de poder elegir."
+
+#~ msgid "Search..."
+#~ msgstr "Buscar..."
+
+#~ msgid "Theme settings"
+#~ msgstr "Opciones de plantilla"
+
+#~ msgid "Comment"
+#~ msgstr "Comentar"
+
+#~ msgid "More in %s &raquo;"
+#~ msgstr "Más en %s &raquo;"
+
+#~ msgid "Table of contents"
+#~ msgstr "Tabla de contenidos"
+
+#~ msgid "More articles &raquo;"
+#~ msgstr "Más artículos &raquo;"
+
+#~ msgid "Reply <span>&darr;</span>"
+#~ msgstr "Responder <span>&darr;</span>"
+
+#~ msgid "In the blog!"
+#~ msgstr "¡En el blog!"
+
+#~ msgid "Home Settings"
+#~ msgstr "Opciones de la página de incio"
+
+#~ msgid "First Block title"
+#~ msgstr "Título del primer bloque"
+
+#~ msgid "First block category"
+#~ msgstr "Categoría del primer bloque"
+
+#~ msgid "Second Block title"
+#~ msgstr "Título del segundo bloque"
+
+#~ msgid "Second block category"
+#~ msgstr "Categoría del segundo bloque"
+
+#~ msgid "Configure your home page:"
+#~ msgstr "Configurá tu página inicial"
+
+#~ msgid "&mdash; Select &mdash;"
+#~ msgstr "&mdash; Elegir &mdash;"
+
+#~ msgid "More interesting articles!"
+#~ msgstr "Más artículos interesantes!"
+
+#~ msgctxt "comments title"
+#~ msgid "1 comment"
+#~ msgid_plural "%1$s comments"
+#~ msgstr[0] "1 comentario"
+#~ msgstr[1] "%1$s comentarios"
+
+#~ msgid "read more"
+#~ msgstr "continuar leyendo"
+
+#~ msgid "More in &raquo;"
+#~ msgstr " Más en &raquo;"
