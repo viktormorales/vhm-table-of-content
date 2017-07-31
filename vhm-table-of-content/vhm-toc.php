@@ -14,11 +14,11 @@
  *
  * @wordpress-plugin
  * Plugin Name:       VHM Table of Content
- * Plugin URI:        http://viktormorales.com
+ * Plugin URI:        https://viktormorales.com
  * Description:       Show a table of content on your posts.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Viktor H. Morales
- * Author URI:        http://viktormorales.com
+ * Author URI:        https://viktormorales.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       vhm-toc
