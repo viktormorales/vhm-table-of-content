@@ -22,5 +22,8 @@ Table Of Content (TOC) are usefull when your posts are quite long. This allows u
 
 == Changelog ==
 
+= 1.0.2 =
+* Adapted for Bootstrap list links group - 14th August, 2017
+
 = 1.0 =
 * Release Date - 30th November, 2016 *
