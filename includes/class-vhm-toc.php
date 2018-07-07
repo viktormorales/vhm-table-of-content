@@ -30,12 +30,6 @@
 class Vhm_Toc {
 
 	/**
-	 * The class responsible for Widgets
-	 */
-	require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-vhm-toc-widget.php';
-
-
-	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
 	 * the plugin.
 	 *
@@ -134,6 +128,12 @@ class Vhm_Toc {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-vhm-toc-public.php';
 
+		/**
+		 * The class responsible for Widgets
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-vhm-toc-widget.php';
+
+
 		$this->loader = new Vhm_Toc_Loader();
 
 	}
@@ -188,8 +188,9 @@ class Vhm_Toc {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		
-		$this->loader->add_action( 'the_content', $plugin_public, 'the_content' );
 		$this->loader->add_action( 'wp_footer', $plugin_public, 'footer_script' );
+
+		$this->loader->add_action( 'init', $plugin_public, 'register_shortcodes');
 	}
 
 	/**

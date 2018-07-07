@@ -52,10 +52,8 @@ class Vhm_Toc_Activator {
         
 		// Add default options
 		update_option(self::$option_name . '_element', '.post h2');
-		update_option(self::$option_name . '_before_items_template', '<strong>' . __('Table of Content', self::$plugin_name) . '</strong><div id="vhm-toc"><div id="vhm-toc-items" class="list-group">');
-		update_option(self::$option_name . '_before_each_item_template', '');
-		update_option(self::$option_name . '_after_each_item_template', '');
-		update_option(self::$option_name . '_after_items_template', '</div></div>');
+		update_option(self::$option_name . '_list_class', 'list-unstyled');
+		update_option(self::$option_name . '_each_item_class', 'list-group-item');
 		
 	}
 

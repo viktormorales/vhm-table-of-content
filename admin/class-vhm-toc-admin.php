@@ -153,20 +153,12 @@ class Vhm_Toc_Admin {
 			array( 'label_for' => $this->option_name . '_element' )
 		);
 		add_settings_field(
-			$this->option_name . '_before_items_template',
-			__( 'Before items template', $this->plugin_name ),
-			array( $this, $this->option_name . '_before_items_template_cb' ),
+			$this->option_name . '_list_class',
+			__( 'List class', $this->plugin_name ),
+			array( $this, $this->option_name . '_list_class_cb' ),
 			$this->plugin_name,
 			$this->option_name . '_general',
-			array( 'label_for' => $this->option_name . '_before_items_template' )
-		);
-		add_settings_field(
-			$this->option_name . '_before_each_item_template',
-			__( 'Before each item template', $this->plugin_name ),
-			array( $this, $this->option_name . '_before_each_item_template_cb' ),
-			$this->plugin_name,
-			$this->option_name . '_general',
-			array( 'label_for' => $this->option_name . '_before_each_item_template' )
+			array( 'label_for' => $this->option_name . '_list_class' )
 		);
 		add_settings_field(
 			$this->option_name . '_each_item_class',
@@ -176,29 +168,11 @@ class Vhm_Toc_Admin {
 			$this->option_name . '_general',
 			array( 'label_for' => $this->option_name . '_each_item_class' )
 		);
-		add_settings_field(
-			$this->option_name . '_after_each_item_template',
-			__( 'After each item template', $this->plugin_name ),
-			array( $this, $this->option_name . '_after_each_item_template_cb' ),
-			$this->plugin_name,
-			$this->option_name . '_general',
-			array( 'label_for' => $this->option_name . '_after_each_item_template' )
-		);
-		add_settings_field(
-			$this->option_name . '_after_items_template',
-			__( 'After items template', $this->plugin_name ),
-			array( $this, $this->option_name . '_after_items_template_cb' ),
-			$this->plugin_name,
-			$this->option_name . '_general',
-			array( 'label_for' => $this->option_name . '_after_items_template' )
-		);
+		
 		
 		register_setting( $this->plugin_name, $this->option_name . '_element' );
-		register_setting( $this->plugin_name, $this->option_name . '_before_items_template' );
-		register_setting( $this->plugin_name, $this->option_name . '_before_each_item_template' );
+		register_setting( $this->plugin_name, $this->option_name . '_list_class' );
 		register_setting( $this->plugin_name, $this->option_name . '_each_item_class' );
-		register_setting( $this->plugin_name, $this->option_name . '_after_each_item_template' );
-		register_setting( $this->plugin_name, $this->option_name . '_after_items_template' );
 	}
 	/**
 	 * Render the text for the general section
@@ -219,31 +193,15 @@ class Vhm_Toc_Admin {
 		echo '<p><span class="description">' . __('Specify the HTML element you want to collect from the post content to create the table of content.', $this->plugin_name) . '</span><br></p>';
 	}
 	/**
-	 * Render the textarea field for "before items template" option
+	 * Render the input field for "list class" option
 	 *
 	 * @since  1.0.0
 	 */
-	public function vhm_toc_before_items_template_cb() {
-		$before_items_template = get_option( $this->option_name . '_before_items_template' );
-		echo '<fieldset><legend class="screen-reader-text"><span>Coso</span></legend>';
-		echo '<p>' . __('In order to see the table of content, two IDs must be specified before listing the links:', $this->plugin_name) . '</p>';
-		echo '<ol><li>' . sprintf(__('%s which is the global wrapper of the items.', $this->plugin_name), '<strong>vhm-toc:</strong>') . '</li>';
-		echo '<li>' . sprintf(__('%s where the items will be added.', $this->plugin_name), '<strong>vhm-toc-items:</strong>') . '</li>';
-		echo '</ol>';
-		echo '<p><strong>' . __('Check this example', $this->plugin_name) . ':</strong> <code>&lt;div id="vhm-toc"&gt;&lt;ol id="vhm-toc-items"&gt;</code></p>';
-		echo '<p><textarea id="' . $this->option_name . '_before_items_template' . '" class="large-text" name="' . $this->option_name . '_before_items_template" cols="50" rows="5">' . $before_items_template . '</textarea></p>';
-		echo '</fieldset>';
+	public function vhm_toc_list_class_cb() {
+		$list_class = get_option( $this->option_name . '_list_class' );
+		echo '<input type="text" name="' . $this->option_name . '_list_class' . '" id="' . $this->option_name . '_list_class' . '" value="' . $list_class . '">';
 	}
-	/**
-	 * Render the textarea field for "before each item template" option
-	 *
-	 * @since  1.0.0
-	 */
-	public function vhm_toc_before_each_item_template_cb() {
-		$before_each_item_template = get_option( $this->option_name . '_before_each_item_template' );
-		echo '<textarea id="' . $this->option_name . '_before_each_item_template' . '" class="large-text" name="' . $this->option_name . '_before_each_item_template" cols="50" rows="5">' . $before_each_item_template . '</textarea>';
-		
-	}
+	
 	/**
 	 * Render the input field for "each item class" option
 	 *
@@ -253,24 +211,5 @@ class Vhm_Toc_Admin {
 		$items_class = get_option( $this->option_name . '_each_item_class' );
 		echo '<input type="text" name="' . $this->option_name . '_each_item_class' . '" id="' . $this->option_name . '_each_item_class' . '" value="' . $items_class . '">';
 	}
-	/**
-	 * Render the textarea field for "after each item template" option
-	 *
-	 * @since  1.0.0
-	 */
-	public function vhm_toc_after_each_item_template_cb() {
-		$after_each_item_template = get_option( $this->option_name . '_after_each_item_template' );
-		echo '<textarea id="' . $this->option_name . '_after_each_item_template' . '" class="large-text" name="' . $this->option_name . '_after_each_item_template" cols="50" rows="5">' . $after_each_item_template . '</textarea>';
-		
-	}
-	/**
-	 * Render the textarea field for "after items template" option
-	 *
-	 * @since  1.0.0
-	 */
-	public function vhm_toc_after_items_template_cb() {
-		$after_items_template = get_option( $this->option_name . '_after_items_template' );
-		echo '<textarea id="' . $this->option_name . '_after_items_template' . '" class="large-text" name="' . $this->option_name . '_after_items_template" cols="50" rows="5">' . $after_items_template . '</textarea>';
-		
-	}
+	
 }

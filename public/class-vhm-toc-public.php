@@ -113,9 +113,7 @@ class Vhm_Toc_Public {
 	public function footer_script()
 	{
 		$element = get_option( $this->option_name . '_element' );
-		$before_each_item_template = get_option( $this->option_name . '_before_each_item_template' );
 		$each_item_class = get_option( $this->option_name . '_each_item_class' );
-		$after_each_item_template = get_option( $this->option_name . '_after_each_item_template' );
 		
 		if (is_single())
 			{
@@ -123,13 +121,12 @@ class Vhm_Toc_Public {
 			<script>
 			jQuery(function(){
 				var vhm_toc_el = jQuery('<?php echo $element; ?>');
-				var vhm_toc = jQuery('#vhm-toc');
-				
-				vhm_toc.hide();
+				var vhm_toc = jQuery("#vhm-toc");
+
 				if (vhm_toc_el.length > 0) {
 					vhm_toc_el.each(function(i){
 						jQuery(this).attr('id', 'section-' + i);
-						var item = jQuery('#vhm-toc-items').append('<?php echo $before_each_item_template; ?><a href="#section-' + i + '" class="<?php echo $each_item_class; ?>">' + jQuery(this).text() + '</a><?php echo $after_each_item_template; ?>' );
+						var item = jQuery('#vhm-toc-items').append('<li class="<?php echo $each_item_class; ?>"><a href="#section-' + i + '">' + jQuery(this).text() + '</a></li>' );
 					});
 					vhm_toc.show();
 				}
@@ -137,5 +134,21 @@ class Vhm_Toc_Public {
 			</script>
 			<?php
 		}
+	}
+
+	public function register_shortcodes() {
+	    add_shortcode( 'vhm-toc', array( $this, 'shortcode') );
+	}
+
+	public function shortcode($atts) {
+		extract( shortcode_atts( array(		
+			'title' => false,
+		), $atts ) );
+		 
+		$list_class = get_option( $this->option_name . '_list_class' );
+
+		$output = '<div id="vhm-toc" style="display:hidden"><ol id="vhm-toc-items" class="' . $list_class . '"></ol></div>';
+		
+		return $output;
 	}
 }
