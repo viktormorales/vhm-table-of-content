@@ -138,19 +138,4 @@ class Vhm_Toc_Public {
 			<?php
 		}
 	}
-	
-	public function the_content($post_content)
-	{
-		$element = get_option($this->option_name . '_element');
-		$template = get_option($this->option_name . '_before_items_template');
-		$template .= get_option($this->option_name . '_after_items_template');
-		
-		if ( is_main_query() && is_singular('post') ) {
-			
-			$post_content = $template . $post_content;
-			
-		}
-
-        return $post_content;
-	}
 }

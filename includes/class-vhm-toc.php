@@ -30,6 +30,12 @@
 class Vhm_Toc {
 
 	/**
+	 * The class responsible for Widgets
+	 */
+	require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-vhm-toc-widget.php';
+
+
+	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
 	 * the plugin.
 	 *
