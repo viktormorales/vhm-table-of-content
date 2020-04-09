@@ -11,8 +11,8 @@ Plugin que permite crear un indice (tabla de contenidos) en las entradas con un 
 * Agregar el shortcode [vhm-toc] donde se desee mostrar la tabla de contenidos.
 
 ## Capturas de pantalla
-* ![Configuración del plugin](https://github.com/viktormorales/VHM-Table-Of-Content/master/screenshot-1.png)
-* ![Opciones en el artículo](https://github.com/viktormorales/VHM-Table-Of-Content/master/screenshot-2.png)
+* ![Configuración del plugin](https://github.com/viktormorales/VHM-Table-Of-Content/blob/master/screenshot-1.png?raw=true)
+* ![Opciones en el artículo](https://github.com/viktormorales/VHM-Table-Of-Content/blob/master/screenshot-2.png?raw=true)
 
 ## Author
 * Viktor H. Morales ([viktormorales.com](http://viktormorales.com))
