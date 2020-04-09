@@ -2,7 +2,7 @@
 
 Plugin que permite crear un indice (tabla de contenidos) en las entradas con un código corto (shortcode). Muy útil cuando tenemos un post largo con varios títulos y necesitamos organización.
 
-![](https://github.com/viktormorales/VHM-Table-Of-Content/master/screenshot-3.png)
+![](https://github.com/viktormorales/VHM-Table-Of-Content/blob/master/screenshot-3.png?raw=true)
 
 ## Instalación
 * Descargar el archivo [master.ZIP](https://github.com/viktormorales/VHM-Table-Of-Content/archive/master.zip) y extraer.
