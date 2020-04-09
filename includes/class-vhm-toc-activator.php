@@ -51,9 +51,10 @@ class Vhm_Toc_Activator {
 		global $wpdb;
         
 		// Add default options
-		update_option(self::$option_name . '_element', '.post h2');
-		update_option(self::$option_name . '_list_class', 'list-unstyled');
-		update_option(self::$option_name . '_each_item_class', 'list-group-item');
+		update_option(self::$option_name . '_title', 'Table of Content');
+		update_option(self::$option_name . '_element', '.vhm-toc');
+		update_option(self::$option_name . '_list_class', '');
+		update_option(self::$option_name . '_each_item_class', '');
 		
 	}
 

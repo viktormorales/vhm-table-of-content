@@ -145,6 +145,14 @@ class Vhm_Toc_Admin {
 			$this->plugin_name
 		);
 		add_settings_field(
+			$this->option_name . '_title',
+			__( 'Title', $this->plugin_name ),
+			array( $this, $this->option_name . '_title_cb' ),
+			$this->plugin_name,
+			$this->option_name . '_general',
+			array( 'label_for' => $this->option_name . '_title' )
+		);
+		add_settings_field(
 			$this->option_name . '_element',
 			__( 'Element', $this->plugin_name ),
 			array( $this, $this->option_name . '_element_cb' ),
@@ -169,7 +177,7 @@ class Vhm_Toc_Admin {
 			array( 'label_for' => $this->option_name . '_each_item_class' )
 		);
 		
-		
+		register_setting( $this->plugin_name, $this->option_name . '_title' );		
 		register_setting( $this->plugin_name, $this->option_name . '_element' );
 		register_setting( $this->plugin_name, $this->option_name . '_list_class' );
 		register_setting( $this->plugin_name, $this->option_name . '_each_item_class' );
@@ -181,6 +189,16 @@ class Vhm_Toc_Admin {
 	 */
 	public function vhm_toc_general_cb() {
 		echo '<p>' . __( 'Please change the settings accordingly.', $this->plugin_name ) . '</p>';
+	}
+	/**
+	 * Render the input field for "title" option
+	 *
+	 * @since  1.0.0
+	 */
+	public function vhm_toc_title_cb() {
+		$element = get_option( $this->option_name . '_title' );
+		echo '<input type="text" name="' . $this->option_name . '_title' . '" id="' . $this->option_name . '_title' . '" value="' . $element . '">';
+		echo '<p><span class="description">' . __('The title of the table of content.', $this->plugin_name) . '</span><br></p>';
 	}
 	/**
 	 * Render the input field for "element" option
@@ -200,6 +218,7 @@ class Vhm_Toc_Admin {
 	public function vhm_toc_list_class_cb() {
 		$list_class = get_option( $this->option_name . '_list_class' );
 		echo '<input type="text" name="' . $this->option_name . '_list_class' . '" id="' . $this->option_name . '_list_class' . '" value="' . $list_class . '">';
+		echo '<p><span class="description">' . __('The CSS class for the &laquo;ol&raquo; tag.', $this->plugin_name) . '</span><br></p>';
 	}
 	
 	/**
@@ -210,6 +229,7 @@ class Vhm_Toc_Admin {
 	public function vhm_toc_each_item_class_cb() {
 		$items_class = get_option( $this->option_name . '_each_item_class' );
 		echo '<input type="text" name="' . $this->option_name . '_each_item_class' . '" id="' . $this->option_name . '_each_item_class' . '" value="' . $items_class . '">';
+		echo '<p><span class="description">' . __('The CSS class for the &laquo;li&raquo;. tags', $this->plugin_name) . '</span><br></p>';
 	}
 	
 }

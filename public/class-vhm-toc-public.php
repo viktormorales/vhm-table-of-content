@@ -106,36 +106,15 @@ class Vhm_Toc_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/vhm-toc-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/vhm-toc-public.js', array( 'jquery' ), $this->version, true );
+		wp_localize_script( $this->plugin_name, 'scripts_var', array(
+			'elementList' => get_option( $this->option_name . '_element' ),
+			'elementItems' => get_option( $this->option_name . '_each_item_class' ),
+			)
+		);
 		
 	}
 	
-	public function footer_script()
-	{
-		$element = get_option( $this->option_name . '_element' );
-		$each_item_class = get_option( $this->option_name . '_each_item_class' );
-		
-		if (is_single())
-			{
-			?>
-			<script>
-			jQuery(function(){
-				var vhm_toc_el = jQuery('<?php echo $element; ?>');
-				var vhm_toc = jQuery("#vhm-toc");
-
-				if (vhm_toc_el.length > 0) {
-					vhm_toc_el.each(function(i){
-						jQuery(this).attr('id', 'section-' + i);
-						var item = jQuery('#vhm-toc-items').append('<li class="<?php echo $each_item_class; ?>"><a href="#section-' + i + '">' + jQuery(this).text() + '</a></li>' );
-					});
-					vhm_toc.show();
-				}
-			});
-			</script>
-			<?php
-		}
-	}
-
 	public function register_shortcodes() {
 	    add_shortcode( 'vhm-toc', array( $this, 'shortcode') );
 	}
@@ -145,9 +124,15 @@ class Vhm_Toc_Public {
 			'title' => false,
 		), $atts ) );
 		 
+		$title = get_option( $this->option_name . '_title' );
 		$list_class = get_option( $this->option_name . '_list_class' );
 
-		$output = '<div id="vhm-toc" style="display:hidden"><ol id="vhm-toc-items" class="' . $list_class . '"></ol></div>';
+		$output = '<div id="vhm-toc" style="display:none">';
+		if ($title)
+			$output .= $title;
+		$output .= '<ol id="vhm-toc-items" class="' . $list_class . '"></ol>';
+		$output .= '</div>';
+
 		
 		return $output;
 	}
