@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VHM Table of Content 1.0\n"
-"POT-Creation-Date: 2016-10-31 19:31-0300\n"
-"PO-Revision-Date: 2016-10-31 19:32-0300\n"
+"POT-Creation-Date: 2020-04-09 19:36-0300\n"
+"PO-Revision-Date: 2020-04-09 19:38-0300\n"
 "Last-Translator: Viktor H. Morales <viktorhugomorales@gmail.com>\n"
 "Language-Team: Viktor H. Morales <viktorhugomorales@gmail.com>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_nx:4c,1,2;_ex:1,2c\n"
@@ -29,34 +29,30 @@ msgid "General"
 msgstr "General"
 
 #: ../admin/class-vhm-toc-admin.php:149
+msgid "Title"
+msgstr "Título"
+
+#: ../admin/class-vhm-toc-admin.php:157
 msgid "Element"
 msgstr "Elemento"
 
-#: ../admin/class-vhm-toc-admin.php:157
-msgid "Before items template"
-msgstr "Plantilla antes de los items"
-
 #: ../admin/class-vhm-toc-admin.php:165
-msgid "Before each item template"
-msgstr "Plantilla antes de cada item"
+msgid "List class"
+msgstr "Clase CSS para la lista"
 
 #: ../admin/class-vhm-toc-admin.php:173
 msgid "Each items class"
 msgstr "Clase CSS para cada item"
 
-#: ../admin/class-vhm-toc-admin.php:181
-msgid "After each item template"
-msgstr "Plantilla para después de cada item"
-
-#: ../admin/class-vhm-toc-admin.php:189
-msgid "After items template"
-msgstr "Plantilla para después de los items"
-
-#: ../admin/class-vhm-toc-admin.php:209
+#: ../admin/class-vhm-toc-admin.php:191
 msgid "Please change the settings accordingly."
 msgstr "Cambie las opciones según sus necesidades."
 
-#: ../admin/class-vhm-toc-admin.php:219
+#: ../admin/class-vhm-toc-admin.php:201
+msgid "The title of the table of content."
+msgstr "El título de la Tabla de contenidos."
+
+#: ../admin/class-vhm-toc-admin.php:211
 msgid ""
 "Specify the HTML element you want to collect from the post content to create "
 "the table of content."
@@ -64,31 +60,46 @@ msgstr ""
 "Especifique el elemento HTML que quiera recojer del contenido de la entrada "
 "para crear la tabla de contenido."
 
-#: ../admin/class-vhm-toc-admin.php:229
-msgid ""
-"In order to see the table of content, two IDs must be specified before "
-"listing the links:"
-msgstr ""
-"Para mostrar la tabla de contenidos, dos IDs deben ser especificados antes "
-"de listar los items:"
+#: ../admin/class-vhm-toc-admin.php:221
+msgid "The CSS class for the &laquo;ol&raquo; tag."
+msgstr "La clase CSS para la etiqueta &laquo;ol&raquo;."
 
-#: ../admin/class-vhm-toc-admin.php:230
+#: ../admin/class-vhm-toc-admin.php:232
+msgid "The CSS class for the &laquo;li&raquo;. tags"
+msgstr "La clase CSS para la etiqueta &laquo;li&raquo;"
+
+#~ msgid "Before items template"
+#~ msgstr "Plantilla antes de los items"
+
+#~ msgid "Before each item template"
+#~ msgstr "Plantilla antes de cada item"
+
+#~ msgid "After each item template"
+#~ msgstr "Plantilla para después de cada item"
+
+#~ msgid "After items template"
+#~ msgstr "Plantilla para después de los items"
+
+#~ msgid ""
+#~ "In order to see the table of content, two IDs must be specified before "
+#~ "listing the links:"
+#~ msgstr ""
+#~ "Para mostrar la tabla de contenidos, dos IDs deben ser especificados "
+#~ "antes de listar los items:"
+
 #, php-format
-msgid "%s which is the global wrapper of the items."
-msgstr "%s el cual es el que encierra la tabla de contenido."
+#~ msgid "%s which is the global wrapper of the items."
+#~ msgstr "%s el cual es el que encierra la tabla de contenido."
 
-#: ../admin/class-vhm-toc-admin.php:231
 #, php-format
-msgid "%s where the items will be added."
-msgstr "%s donde se mostrarán los items."
+#~ msgid "%s where the items will be added."
+#~ msgstr "%s donde se mostrarán los items."
 
-#: ../admin/class-vhm-toc-admin.php:233
-msgid "Check this example"
-msgstr "Vea el siguiente ejemplo"
+#~ msgid "Check this example"
+#~ msgstr "Vea el siguiente ejemplo"
 
-#: ../includes/class-vhm-toc-activator.php:55
-msgid "Table of Content"
-msgstr "Tabla de Contenidos"
+#~ msgid "Table of Content"
+#~ msgstr "Tabla de Contenidos"
 
 #~ msgid "Previous page"
 #~ msgstr "Anterior"
@@ -172,9 +183,6 @@ msgstr "Tabla de Contenidos"
 
 #~ msgid "More in %s &raquo;"
 #~ msgstr "Más en %s &raquo;"
-
-#~ msgid "Table of contents"
-#~ msgstr "Tabla de contenidos"
 
 #~ msgid "More articles &raquo;"
 #~ msgstr "Más artículos &raquo;"
