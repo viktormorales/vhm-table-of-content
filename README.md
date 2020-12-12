@@ -20,5 +20,8 @@ Opciones en el artículo
 ## Author
 * Victor H. Morales ([mkdev.ar](https://mkdev.ar))
 
+## Version 1.2
+* Drop jQuery in favor of Vanilla JS
+
 ## License
 Released under the [MIT license](http://www.opensource.org/licenses/MIT).
