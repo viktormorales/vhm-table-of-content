@@ -1,15 +1,22 @@
-(function( $ ) {
-	'use strict';
+'use strict';
 
-	var vhm_toc_el = jQuery(scripts_var.elementList);
-	var vhm_toc = jQuery("#vhm-toc");
-	
-	if (vhm_toc_el.length > 0) {
-		vhm_toc_el.each(function(i){
-			jQuery(this).attr('id', 'section-' + i);
-			var item = jQuery('#vhm-toc-items').append('<li class="' + scripts_var.elementItems + '"><a href="#section-' + i + '">' + jQuery(this).text() + '</a></li>' );
-		});
-		vhm_toc.show();
-	}
+// Select the list wrapper element
+const vhmTocWrapper = document.querySelector("#vhm-toc");
+// Select the list
+const vhmTocList = vhmTocWrapper.querySelector("ol");
+// Select the elements from which we will create the table of content
+const vhmTocElements = document.querySelectorAll(options.elementList);
 
-})( jQuery );
+// If the wrapper element exists and there are elements
+if (vhmTocWrapper && vhmTocElements.length > 0) {
+	// Run through the post elements to create the table of content
+	vhmTocElements.forEach(function(element, index) {
+		// Add and ID to the element
+		element.id = `section-${index}`;
+
+		// Add the HTML to append to the list and an anchor link it to the element
+		vhmTocList.innerHTML += `<li class="${options.elementItems}"><a href="#section-${index}">${element.innerHTML}</a></li>`;
+	});
+	// Show the wrapper
+	vhmTocWrapper.style.display = 'block';
+}
