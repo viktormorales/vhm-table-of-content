@@ -39,15 +39,6 @@ class Vhm_Toc_Admin {
 	 * @var      string    $version    The current version of this plugin.
 	 */
 	private $version;
-	
-	/**
-	 * The options name to be used in this plugin
-	 *
-	 * @since  	1.0.0
-	 * @access 	private
-	 * @var  	string 		$option_name 	Option name of this plugin
-	 */
-	private $option_name = 'vhm_toc';
 
 	/**
 	 * Initialize the class and set its properties.

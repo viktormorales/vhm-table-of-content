@@ -58,15 +58,6 @@ class Vhm_Toc {
 	protected $version;
 
 	/**
-	 * The options name to be used in this plugin
-	 *
-	 * @since  	1.0.0
-	 * @access 	private
-	 * @var  	string 		$option_name 	Option name of this plugin
-	 */
-	private $option_name = 'vhm_toc';
-	
-	/**
 	 * Define the core functionality of the plugin.
 	 *
 	 * Set the plugin name and the plugin version that can be used throughout the plugin.

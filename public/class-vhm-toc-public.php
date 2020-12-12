@@ -39,16 +39,6 @@ class Vhm_Toc_Public {
 	 * @var      string    $version    The current version of this plugin.
 	 */
 	private $version;
-	
-	/**
-	 * The options name to be used in this plugin
-	 *
-	 * @since  	1.0.0
-	 * @access 	private
-	 * @var  	string 		$option_name 	Option name of this plugin
-	 */
-	private $option_name = 'vhm_toc';
-
 
 	/**
 	 * Initialize the class and set its properties.
@@ -115,10 +105,22 @@ class Vhm_Toc_Public {
 		
 	}
 	
+	/**
+	 * Register shortcode
+	 * 
+	 * @author Victor H. Morales <vmorales@mkdev.ar>
+	 * @since 1.0.0
+	 */
 	public function register_shortcodes() {
 	    add_shortcode( 'vhm-toc', array( $this, 'shortcode') );
 	}
 
+	/**
+	 * Create the shortcode content
+	 * 
+	 * @author Victor H. Morales <vmorales@mkdev.ar>
+	 * @since 1.0.0
+	 */
 	public function shortcode($atts) {
 		extract( shortcode_atts( array(		
 			'title' => false,
@@ -133,7 +135,6 @@ class Vhm_Toc_Public {
 		$output .= '<ol id="vhm-toc-items" class="' . $list_class . '"></ol>';
 		$output .= '</div>';
 
-		
 		return $output;
 	}
 }
