@@ -107,7 +107,7 @@ class Vhm_Toc_Public {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/vhm-toc-public.js', array( 'jquery' ), $this->version, true );
-		wp_localize_script( $this->plugin_name, 'scripts_var', array(
+		wp_localize_script( $this->plugin_name, 'options', array(
 			'elementList' => get_option( $this->option_name . '_element' ),
 			'elementItems' => get_option( $this->option_name . '_each_item_class' ),
 			)
