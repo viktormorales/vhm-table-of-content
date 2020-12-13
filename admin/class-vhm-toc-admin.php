@@ -100,7 +100,6 @@ class Vhm_Toc_Admin {
 
 	}
 	
-	
 	/**
 	 * Add an options page under the Settings submenu
 	 *
@@ -132,6 +131,7 @@ class Vhm_Toc_Admin {
 		register_setting( $this->plugin_name, $this->plugin_name . '_title' );		
 		register_setting( $this->plugin_name, $this->plugin_name . '_element' );
 		register_setting( $this->plugin_name, $this->plugin_name . '_list_class' );
+		register_setting( $this->plugin_name, $this->plugin_name . '_first_item_class' );
 		register_setting( $this->plugin_name, $this->plugin_name . '_each_item_class' );
 	}
 }
