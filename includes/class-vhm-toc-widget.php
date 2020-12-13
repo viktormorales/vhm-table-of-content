@@ -23,7 +23,7 @@ class VHM_Toc_Widget extends WP_Widget {
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
-		$list_class = get_option( $this->option_name . '_list_class' );
+		$list_class = get_option( $this->plugin_name . '_list_class' );
 		?>
 		<div id="vhm-toc" style="display:hidden"><ol id="vhm-toc-items" class="<?php echo $list_class; ?>"></ol></
 		<?php
