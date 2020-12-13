@@ -26,19 +26,9 @@ class Vhm_Toc_Activator {
 	 *
 	 * @since  	1.0.0
 	 * @access 	private
-	 * @var  	string 		$option_name 	Option name of this plugin
+	 * @var  	string 		$plugin_name 	Option name of this plugin
 	 */
-	private static $option_name = 'vhm_toc';
-	
-	/**
-	 * The unique identifier of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
-	 */
-	private static $plugin_name = 'vhm-toc';
-	
+	private static $plugin_name = 'vhm_toc';
 	/**
 	 * Short Description. (use period)
 	 *
@@ -51,10 +41,10 @@ class Vhm_Toc_Activator {
 		global $wpdb;
         
 		// Add default options
-		update_option(self::$option_name . '_title', 'Table of Content');
-		update_option(self::$option_name . '_element', '.vhm-toc');
-		update_option(self::$option_name . '_list_class', '');
-		update_option(self::$option_name . '_each_item_class', '');
+		update_option(self::$plugin_name . '_title', 'Table of Content');
+		update_option(self::$plugin_name . '_element', '.vhm-toc');
+		update_option(self::$plugin_name . '_list_class', '');
+		update_option(self::$plugin_name . '_each_item_class', '');
 		
 	}
 
