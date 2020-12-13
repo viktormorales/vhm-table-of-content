@@ -129,98 +129,9 @@ class Vhm_Toc_Admin {
 	 * @since  1.0.0
 	 */
 	public function register_setting() {
-		add_settings_section(
-			$this->plugin_name . '_general',
-			__( 'General', $this->plugin_name ),
-			array( $this, $this->plugin_name . '_general_cb' ),
-			$this->plugin_name
-		);
-		add_settings_field(
-			$this->plugin_name . '_title',
-			__( 'Title', $this->plugin_name ),
-			array( $this, $this->plugin_name . '_title_cb' ),
-			$this->plugin_name,
-			$this->plugin_name . '_general',
-			array( 'label_for' => $this->plugin_name . '_title' )
-		);
-		add_settings_field(
-			$this->plugin_name . '_element',
-			__( 'Element', $this->plugin_name ),
-			array( $this, $this->plugin_name . '_element_cb' ),
-			$this->plugin_name,
-			$this->plugin_name . '_general',
-			array( 'label_for' => $this->plugin_name . '_element' )
-		);
-		add_settings_field(
-			$this->plugin_name . '_list_class',
-			__( 'List class', $this->plugin_name ),
-			array( $this, $this->plugin_name . '_list_class_cb' ),
-			$this->plugin_name,
-			$this->plugin_name . '_general',
-			array( 'label_for' => $this->plugin_name . '_list_class' )
-		);
-		add_settings_field(
-			$this->plugin_name . '_each_item_class',
-			__( 'Each items class', $this->plugin_name ),
-			array( $this, $this->plugin_name . '_each_item_class_cb' ),
-			$this->plugin_name,
-			$this->plugin_name . '_general',
-			array( 'label_for' => $this->plugin_name . '_each_item_class' )
-		);
-		
 		register_setting( $this->plugin_name, $this->plugin_name . '_title' );		
 		register_setting( $this->plugin_name, $this->plugin_name . '_element' );
 		register_setting( $this->plugin_name, $this->plugin_name . '_list_class' );
 		register_setting( $this->plugin_name, $this->plugin_name . '_each_item_class' );
 	}
-	/**
-	 * Render the text for the general section
-	 *
-	 * @since  1.0.0
-	 */
-	public function vhm_toc_general_cb() {
-		echo '<p>' . __( 'Please change the settings accordingly.', $this->plugin_name ) . '</p>';
-	}
-	/**
-	 * Render the input field for "title" option
-	 *
-	 * @since  1.0.0
-	 */
-	public function vhm_toc_title_cb() {
-		$element = get_option( $this->plugin_name . '_title' );
-		echo '<input type="text" name="' . $this->plugin_name . '_title' . '" id="' . $this->plugin_name . '_title' . '" value="' . $element . '">';
-		echo '<p><span class="description">' . __('The title of the table of content.', $this->plugin_name) . '</span><br></p>';
-	}
-	/**
-	 * Render the input field for "element" option
-	 *
-	 * @since  1.0.0
-	 */
-	public function vhm_toc_element_cb() {
-		$element = get_option( $this->plugin_name . '_element' );
-		echo '<input type="text" name="' . $this->plugin_name . '_element' . '" id="' . $this->plugin_name . '_element' . '" value="' . $element . '">';
-		echo '<p><span class="description">' . __('Specify the HTML element you want to collect from the post content to create the table of content.', $this->plugin_name) . '</span><br></p>';
-	}
-	/**
-	 * Render the input field for "list class" option
-	 *
-	 * @since  1.0.0
-	 */
-	public function vhm_toc_list_class_cb() {
-		$list_class = get_option( $this->plugin_name . '_list_class' );
-		echo '<input type="text" name="' . $this->plugin_name . '_list_class' . '" id="' . $this->plugin_name . '_list_class' . '" value="' . $list_class . '">';
-		echo '<p><span class="description">' . __('The CSS class for the &laquo;ol&raquo; tag.', $this->plugin_name) . '</span><br></p>';
-	}
-	
-	/**
-	 * Render the input field for "each item class" option
-	 *
-	 * @since  1.0.0
-	 */
-	public function vhm_toc_each_item_class_cb() {
-		$items_class = get_option( $this->plugin_name . '_each_item_class' );
-		echo '<input type="text" name="' . $this->plugin_name . '_each_item_class' . '" id="' . $this->plugin_name . '_each_item_class' . '" value="' . $items_class . '">';
-		echo '<p><span class="description">' . __('The CSS class for the &laquo;li&raquo;. tags', $this->plugin_name) . '</span><br></p>';
-	}
-	
 }
