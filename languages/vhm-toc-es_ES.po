@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VHM Table of Content 1.0\n"
-"POT-Creation-Date: 2020-04-09 19:36-0300\n"
-"PO-Revision-Date: 2020-04-09 19:38-0300\n"
+"POT-Creation-Date: 2020-12-12 21:45-0300\n"
+"PO-Revision-Date: 2020-12-12 21:45-0300\n"
 "Last-Translator: Viktor H. Morales <viktorhugomorales@gmail.com>\n"
 "Language-Team: Viktor H. Morales <viktorhugomorales@gmail.com>\n"
 "Language: es_ES\n"
@@ -16,57 +16,51 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPathExcluded-0: ../js\n"
 
-#: ../admin/class-vhm-toc-admin.php:120
+#: ../admin/class-vhm-toc-admin.php:110
 msgid "VHM Table of Content Settings"
 msgstr "Opciones de VHM Tabla de Contenidos"
 
-#: ../admin/class-vhm-toc-admin.php:121
+#: ../admin/class-vhm-toc-admin.php:111
 msgid "VHM Table of Content"
 msgstr "VHM Tabla de Contenidos"
 
-#: ../admin/class-vhm-toc-admin.php:143
-msgid "General"
-msgstr "General"
-
-#: ../admin/class-vhm-toc-admin.php:149
-msgid "Title"
-msgstr "Título"
-
-#: ../admin/class-vhm-toc-admin.php:157
-msgid "Element"
-msgstr "Elemento"
-
-#: ../admin/class-vhm-toc-admin.php:165
-msgid "List class"
-msgstr "Clase CSS para la lista"
-
-#: ../admin/class-vhm-toc-admin.php:173
-msgid "Each items class"
-msgstr "Clase CSS para cada item"
-
-#: ../admin/class-vhm-toc-admin.php:191
+#: ../admin/partials/vhm-toc-admin-display.php:23
 msgid "Please change the settings accordingly."
 msgstr "Cambie las opciones según sus necesidades."
 
-#: ../admin/class-vhm-toc-admin.php:201
-msgid "The title of the table of content."
-msgstr "El título de la Tabla de contenidos."
+#: ../admin/partials/vhm-toc-admin-display.php:36
+msgid "Element"
+msgstr "Elemento"
 
-#: ../admin/class-vhm-toc-admin.php:211
-msgid ""
-"Specify the HTML element you want to collect from the post content to create "
-"the table of content."
-msgstr ""
-"Especifique el elemento HTML que quiera recojer del contenido de la entrada "
-"para crear la tabla de contenido."
+#: ../admin/partials/vhm-toc-admin-display.php:44
+msgid "List class"
+msgstr "Clase CSS para la lista"
 
-#: ../admin/class-vhm-toc-admin.php:221
-msgid "The CSS class for the &laquo;ol&raquo; tag."
-msgstr "La clase CSS para la etiqueta &laquo;ol&raquo;."
+#: ../admin/partials/vhm-toc-admin-display.php:52
+msgid "First item class"
+msgstr "Clase CSS del primer item de la lista"
 
-#: ../admin/class-vhm-toc-admin.php:232
-msgid "The CSS class for the &laquo;li&raquo;. tags"
-msgstr "La clase CSS para la etiqueta &laquo;li&raquo;"
+#: ../admin/partials/vhm-toc-admin-display.php:60
+msgid "Each item class"
+msgstr "Clase CSS para cada item de la lista"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Title"
+#~ msgstr "Título"
+
+#~ msgid "The title of the table of content."
+#~ msgstr "El título de la Tabla de contenidos."
+
+#~ msgid "Specify the HTML element you want to collect from the post content to create the table of content."
+#~ msgstr "Especifique el elemento HTML que quiera recojer del contenido de la entrada para crear la tabla de contenido."
+
+#~ msgid "The CSS class for the &laquo;ol&raquo; tag."
+#~ msgstr "La clase CSS para la etiqueta &laquo;ol&raquo;."
+
+#~ msgid "The CSS class for the &laquo;li&raquo;. tags"
+#~ msgstr "La clase CSS para la etiqueta &laquo;li&raquo;"
 
 #~ msgid "Before items template"
 #~ msgstr "Plantilla antes de los items"
@@ -80,18 +74,12 @@ msgstr "La clase CSS para la etiqueta &laquo;li&raquo;"
 #~ msgid "After items template"
 #~ msgstr "Plantilla para después de los items"
 
-#~ msgid ""
-#~ "In order to see the table of content, two IDs must be specified before "
-#~ "listing the links:"
-#~ msgstr ""
-#~ "Para mostrar la tabla de contenidos, dos IDs deben ser especificados "
-#~ "antes de listar los items:"
+#~ msgid "In order to see the table of content, two IDs must be specified before listing the links:"
+#~ msgstr "Para mostrar la tabla de contenidos, dos IDs deben ser especificados antes de listar los items:"
 
-#, php-format
 #~ msgid "%s which is the global wrapper of the items."
 #~ msgstr "%s el cual es el que encierra la tabla de contenido."
 
-#, php-format
 #~ msgid "%s where the items will be added."
 #~ msgstr "%s donde se mostrarán los items."
 
@@ -110,11 +98,8 @@ msgstr "La clase CSS para la etiqueta &laquo;li&raquo;"
 #~ msgid "Page"
 #~ msgstr "Página"
 
-#~ msgid ""
-#~ "This post is password protected. Enter the password to view any comments."
-#~ msgstr ""
-#~ "Este artículo está protegido. Ingrese la contraseña para ver los "
-#~ "comentarios."
+#~ msgid "This post is password protected. Enter the password to view any comments."
+#~ msgstr "Este artículo está protegido. Ingrese la contraseña para ver los comentarios."
 
 #~ msgid "1 comment"
 #~ msgstr "1 comentario"
@@ -131,10 +116,8 @@ msgstr "La clase CSS para la etiqueta &laquo;li&raquo;"
 #~ msgid "Testimonials"
 #~ msgstr "Testimoniales"
 
-#~ msgid ""
-#~ "Websites | Branding | Brochures | E-Marketing | Social Media | And more..."
-#~ msgstr ""
-#~ "Sitios web | Branding | Folleteria | E-Marketing | Social Media | Y más..."
+#~ msgid "Websites | Branding | Brochures | E-Marketing | Social Media | And more..."
+#~ msgstr "Sitios web | Branding | Folleteria | E-Marketing | Social Media | Y más..."
 
 #~ msgid "Powered by"
 #~ msgstr "Con tecnología de"

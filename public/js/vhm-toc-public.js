@@ -3,7 +3,7 @@
 // Select the list wrapper element
 const vhmTocWrapper = document.querySelector("#vhm-toc");
 // Select the list
-const vhmTocList = vhmTocWrapper.querySelector("ol");
+const vhmTocList = vhmTocWrapper.querySelector("#vhm-toc-items");
 // Select the elements from which we will create the table of content
 const vhmTocElements = document.querySelectorAll(options.elementList);
 
@@ -15,7 +15,7 @@ if (vhmTocWrapper && vhmTocElements.length > 0) {
 		element.id = `section-${index}`;
 
 		// Add the HTML to append to the list and an anchor link it to the element
-		vhmTocList.innerHTML += `<li class="${options.elementItems}"><a href="#section-${index}">${element.innerHTML}</a></li>`;
+		vhmTocList.innerHTML += `<a href="#section-${index}" class="${options.elementItems}">${element.innerHTML}</a>`;
 	});
 	// Show the wrapper
 	vhmTocWrapper.style.display = 'block';
