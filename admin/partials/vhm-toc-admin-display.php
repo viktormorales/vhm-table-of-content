@@ -49,6 +49,14 @@
                 </tr>
                 <tr valign="top">
                     <th scope="row" class="titledesc">
+                        <label for="<?php echo $this->plugin_name; ?>_first_item_class"><?php _e('First item class', $this->plugin_name); ?></label>
+                    </th>
+                    <td>
+                        <input type="text" name="<?php echo $this->plugin_name; ?>_first_item_class" id="<?php echo $this->plugin_name; ?>_first_item_class" class="regular-text" value="<?php echo get_option($this->plugin_name . '_first_item_class'); ?>" placeholder="">
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row" class="titledesc">
                         <label for="<?php echo $this->plugin_name; ?>_each_item_class"><?php _e('Each item class', $this->plugin_name); ?></label>
                     </th>
                     <td>
