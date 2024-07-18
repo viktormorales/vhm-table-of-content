@@ -15,7 +15,7 @@ if (vhmTocWrapper && vhmTocElements.length > 0) {
 		element.id = `section-${index}`;
 
 		// Add the HTML to append to the list and an anchor link it to the element
-		vhmTocList.innerHTML += `<a href="#section-${index}" class="${options.elementItems}">${element.innerHTML}</a>`;
+		vhmTocList.innerHTML += `<a href="#section-${index}" class="${options.elementItems}">${element.textContent}</a>`;
 	});
 	// Show the wrapper
 	vhmTocWrapper.style.display = 'block';
