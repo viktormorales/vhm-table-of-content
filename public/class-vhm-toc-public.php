@@ -131,10 +131,10 @@ class Vhm_Toc_Public {
 		$first_item_class = get_option( $this->plugin_name . '_first_item_class' );
 
 		$output = '<div id="vhm-toc" style="display:none">';
-		$output .= '<div id="vhm-toc-items" class="' . $list_class . '">';
 		if ($title)
 			$output .= '<span class="' . $first_item_class .'">' . $title . '</span>';
-		$output .= '</div>';
+		$output .= '<ol id="vhm-toc-items" class="' . $list_class . '">';
+		$output .= '</ol>';
 		$output .= '</div>';
 
 		return $output;
